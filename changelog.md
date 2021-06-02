@@ -1,6 +1,9 @@
 # Changelog
 
-* Created 'test-data' folder structure.
-	* Test data is divided into three parts (subfolders) which have their respective SQL files.
-	* These files are meant to be executed in order.
-	* Each folder within the structure contains a 'readme' as a placeholder.
+**./test-data/p1-preloaded_lists/geography.sql**
+* New file - This will contain geography-related test data.
+* Currently only contains data for the 'StateTerritory' table.
+* Test data for the following tables:
+	* StateTerritory
+	* Postcode
+	* Location
