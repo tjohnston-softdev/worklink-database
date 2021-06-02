@@ -1,3 +1,3 @@
 # Changelog
 
-Initial commit
+Added original definition files to 'schema' folder.
