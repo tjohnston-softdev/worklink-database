@@ -1,8 +1,5 @@
 # Changelog
 
-**./test-data/p1-preloaded_lists/hobbies.sql**
-* New file - Contains test data related to hobbies.
-* Affects tables:
-	* HobbyCategory
-	* Hobby
-	* HobbyGrouping
+**./er-diagram/**
+* New folder - This will contain ER Diagram for database design.
+* Includes 'readme.md' file as placeholder.
