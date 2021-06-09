@@ -1,7 +1,8 @@
 # Changelog
 
-**./test-data/p1-preloaded_lists/culture.sql**
-* New file - Contains test data related to foreign languages, and cultural backgrounds.
+**./test-data/p1-preloaded_lists/hobbies.sql**
+* New file - Contains test data related to hobbies.
 * Affects tables:
-	* OtherLanguages
-	* CulturalBackground
+	* HobbyCategory
+	* Hobby
+	* HobbyGrouping
