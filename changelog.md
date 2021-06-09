@@ -1,5 +1,6 @@
 # Changelog
 
-**./er-diagram/**
-* New folder - This will contain ER Diagram for database design.
-* Includes 'readme.md' file as placeholder.
+**./er-diagram/wf-link-db.xml**
+* New file - Draw IO source file for ER diagram.
+	* So far, this only contains the entity objects.
+	* They are not currently arranged or connected.
