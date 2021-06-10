@@ -1,5 +1,8 @@
 # Changelog
 
-**./er-diagram/**
-* Exported ER diagram as 'wf-link-db.svg'
-* Removed placeholder file.
+Updated ER diagram relationship names
+
+| Source         | Destination                  | Original Name  | New Name   |
+|----------------|------------------------------|----------------|------------|
+| ExperienceArea | SupportWorkerExperienceAreas | Experienced by | Learned by |
+| SupportWorker  | SupportWorkerQualifications  | Achieved       | Studied    |
