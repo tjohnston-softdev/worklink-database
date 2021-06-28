@@ -1,4 +1,4 @@
 # Changelog
 
-**./test-data/p3-employers_interviews/**
-* Deleted folder.
+**./test-data/**
+* Deleted 'readme.md' files.
