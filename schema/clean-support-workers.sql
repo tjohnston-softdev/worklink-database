@@ -1,4 +1,5 @@
 USE linkServicesGroup;
+
 DELETE FROM SupportWorkerOther WHERE supportWorkerID > 0;
 DELETE FROM SupportWorkerPreviousExperience WHERE supportWorkerID > 0;
 DELETE FROM SupportWorkerExperienceAreas WHERE supportWorkerID > 0;
