@@ -40,15 +40,6 @@ INSERT INTO Qualification (qualificationName) VALUES
 
 
 INSERT INTO ExperienceArea (experienceAreaName) VALUES
-("Acquired Brain Injury"), ("Autism"), ("Cerebral Palsy"),
-("Cystic Fibrosis"), ("Downs Syndrome"), ("Epilespy"),
-("Hearing Impairment"), ("Intellectual Disabilities"), ("Motor Neuron Disease"),
-("Muscular Dystrophy"), ("Physical Disabilities"), ("Spina Bifida"),
-("Spinal Cord Injury"), ("Visual Impairment"), ("Anxiety"),
-("Bipolar Disorder"), ("Borderline Personality Disorder"), ("Depression"),
-("Eating Disorders"), ("Hoarding"), ("Obsessive-Compulsive Disorder"),
-("Post-Traumatic Stress Disorder"), ("Schizophrenia"), ("Substance Abuse"),
-("Antisocial Personality Disorder"), ("Dementia"), ("Parkinson's Disease"),
-("Arthritis"), ("Asthma"), ("Cardiovascular Disease"),
-("Obstructive Pulmonary Disease"), ("Respitory Illnesses"), ("Diabeties"),
-("Alzheimer's Disease");
+("Intellecual"), ("Physical"), ("Acquired Brain Injury"),
+("Neurological"), ("Vision"), ("Hearing"),
+("Speech"), ("Psychiatric"), ("Developmental Delay");

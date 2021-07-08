@@ -1,4 +1,5 @@
 # Changelog
 
-* Deleted Support Worker test data.
-* Will be re-generated on public release.
+**./test-data/p1-preloaded_lists/certification.sql**
+* Rewrote 'ExperienceArea' values from scratch.
+	* Now uses a simpler list.
