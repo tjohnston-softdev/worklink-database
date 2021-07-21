@@ -1,5 +1,8 @@
 # Changelog
 
-**./test-data/p1-preloaded_lists/certification.sql**
-* Rewrote 'ExperienceArea' values from scratch.
-	* Now uses a simpler list.
+**./data-dict.md**
+* New file - Contains data dictionary.
+* This is only the skeleton for now.
+	* Contents
+	* Section placeholders.
+	* Links have not been implemented yet.
