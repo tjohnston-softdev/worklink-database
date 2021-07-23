@@ -1,6 +1,9 @@
 # Data Dictionary
 
-*INTRODUCTION GOES HERE*
+This document is a written description of the Workforce Link database schema. It includes descriptions of what each table is for and details for the underlying columns. Each column has a name, description, data type, whether it is required, if values must be unique, a foreign key if applicable, and any default value.
+
+Columns marked as 'Unique' with a number, such as  'X(1)' form a composite alternative key. In other words, each combination of those columns must be unique. If a 'Unique' column doesn't have a number, they are separate.
+
 
 ---
 

@@ -1,4 +1,4 @@
 # Changelog
 
 **./data-dict.md**
-* Wrote footer section.
+* Wrote introduction section.
