@@ -1,4 +1,7 @@
 # Changelog
 
 **./data-dict.md**
-* Added table links to contents.
+* Added column information to these tables:
+	* StateTerritory
+	* Postcode
+	* Location

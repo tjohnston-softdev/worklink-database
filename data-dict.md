@@ -52,7 +52,12 @@
 
 This table stores a hard-coded list of the states and territories within Australia. It is used as a basis for sorting individual suburbs that are serviced by Workforce Link. Both the name and abbreviation is stored so that it can be used to write full location names. (eg. Fortitude Valley, Queensland, 4006)
 
-*COLUMNS*
+|  			Name 		        |  			Description 		                                       |  			Data Type 		        |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|---------------|-----------------------------------------------------|--------------------|------------|----------|---------------|---------------|------------------|
+|  			stateID 		     |  			ID number of Australian state or territory. 		       |  			TINYINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			stateName 		   |  			The name of the entry row. 		                        |  			VARCHAR(30) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			stateAbbrev 		 |  			Shorthand abbreviation of the full name (eg. QLD) 		 |  			VARCHAR(3) 		       |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		  |  			Flag as to whether this row is active. 		            |  			TINYINT(1) 		       |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -60,7 +65,10 @@ This table stores a hard-coded list of the states and territories within Austral
 
 This table stores a list of postal codes within Australia that correspond to areas serviced by Workforce Link. It is used to match postcodes to suburbs, and write full location names. (eg. Milton, Queensland, 4064). See [Wikipedia](https://en.wikipedia.org/wiki/Postcodes_in_Australia) for more information on how postcodes work.
 
-*COLUMNS*
+|  			Name 		           |  			Description 		                                         |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		 |
+|------------------|-------------------------------------------------------|---------------------|------------|----------|---------------|---------------|-----------|
+|  			postcodeNumber 		 |  			Number referring to a postal code within Australia. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			   			 		     |
+|  			activeFlag 		     |  			Flag as to whether this row is active. 		              |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		       |
 
 ---
 
@@ -68,7 +76,15 @@ This table stores a list of postal codes within Australia that correspond to are
 
 This table stores a list of suburbs and towns that are serviced by Workforce Link. When filling out their profile, a support worker can select a known suburb as their home location. The latitude and longitude indicates an 'origin point' which is used to help measure distances between suburbs when searching for support workers. (eg. Within 20 kilometres of Yamanto)
 
-*COLUMNS*
+|  			Name 		           |  			Description 		                                                           |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		               |  			Default 		        |
+|------------------|-------------------------------------------------------------------------|---------------------|------------|----------|---------------|-----------------------------|------------------|
+|  			locationID 		     |  			The ID number of the location entry. 		                                  |  			BIGINT 		            |  			X 		        |  			X 		      |  			X 		           |  			   			 		                       |  			AUTO_INCREMENT 		 |
+|  			locationName 		   |  			The name of the location 		                                              |  			VARCHAR(50) 		       |  			X 		        |  			X(1) 		   |  			   			 		         |  			   			 		                       |  			   			 		            |
+|  			stateID 		        |  			The ID number of the Australian state or territory 		                    |  			TINYINT UNSIGNED 		  |  			X 		        |  			   			 		    |  			   			 		         |  			StateTerritory (stateID) 		  |  			   			 		            |
+|  			postcodeNumber 		 |  			The postal code of the location. 		                                      |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X(1) 		   |  			   			 		         |  			Postcode (postcodeNumber) 		 |  			   			 		            |
+|  			latitude 		       |  			The North-South geographic coordinate of the location's origin 			point. 		 |  			DECIMAL(10,7) 		     |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		                       |  			0 		              |
+|  			longitude 		      |  			The East-West geographic coordinate of the location's origin 			point. 		   |  			DECIMAL(10,7) 		     |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		                       |  			0 		              |
+|  			activeFlag 		     |  			Flag as to whether this row is active. 		                                |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		                       |  			1 		              |
 
 ---
 
