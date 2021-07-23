@@ -14,24 +14,18 @@ INSERT INTO CheckClearance (checkClearanceName, checkClearanceDesc) VALUES
 
 
 INSERT INTO Qualification (qualificationName) VALUES
-('Diploma of Community Services Case Management'),
-('Diploma of Community Services'),
-('Diploma of Youth Work'),
-('Diploma of Alcohol Other Drugs'),
-('Certificate IV in Disability'),
-('Certificate IV in Mental Health'),
-('Certificate IV in Youth Work'),
-('Certificate IV in Aging Support'),
-('Certificate III in Home and Community'),
-('Certificate III in Individual Support Services'),
-('Certificate III in Aged Care'),
-('Certificate III in Disability'),
-('Certificate III in Health Services Assistance'),
-('Certificate IV in Aged Care'),
-('Degree in Nursing'),
-('Degree in Allied Health'),
-('Certificate IV in Home and Community'),
-('Other Relevant Qualifications'),
+('School Certificate (Year 10)'),
+('Higher School Certificate (Year 12)'),
+('Certificate I'),
+('Certificate II'),
+('Certificate III'),
+('Certificate IV'),
+('Diploma'),
+('Advanced Diploma'),
+('Bachelor Degree'),
+('Bachelor Degree w/ Honours'),
+('Masters Degree'),
+('Doctoral Degree'),
 ('Other Relevant Experience');
 
 
