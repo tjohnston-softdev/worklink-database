@@ -1,7 +1,8 @@
 # Changelog
 
 **./data-dict.md**
-* Added column information to these tables:
-	* SupportWorker
-	* SupportWorkerOtherLanguages
-* Minimized column information markdown for tables before 'SupportWorker'
+* Added column information to the remaining tables
+	* SupportWorkerChecks
+	* SupportWorkerPersonality
+	* [...]
+	* SupportWorkerRequest

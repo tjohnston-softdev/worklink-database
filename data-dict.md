@@ -348,7 +348,12 @@ This table links support worker accounts to their selected 'Other Languages'. A 
 
 This table links support worker accounts to their selected 'Checks and Clearances'. A support worker must have at least one selected check or clearance to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that holds a particular check/clearance. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| checkClearanceID | The ID number of the check/clearance being held by the support worker. | TINYINT UNSIGNED | X |  | X | CheckClearance (checkClearanceID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -356,7 +361,12 @@ This table links support worker accounts to their selected 'Checks and Clearance
 
 This table links support worker accounts to their selected personality traits. A support worker must select at least one trait to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that has a particular personality trait. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| traitID | The ID number of the personality trait that the support worker has. | SMALLINT UNSIGNED | X |  | X | PersonalityTrait (traitID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -364,7 +374,12 @@ This table links support worker accounts to their selected personality traits. A
 
 This table links support worker accounts to their selected hobbies. A support worker must select at least one hobby to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that enjoys a particular hobby. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| hobbyID | The ID number of the hobby that the support worker enjoys doing. | SMALLINT UNSIGNED | X |  | X | Hobby (hobbyID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -372,7 +387,12 @@ This table links support worker accounts to their selected hobbies. A support wo
 
 This table links support worker accounts to their selected gaming console preferences. A support worker can optionally include one or multiple consoles to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that plays a particular game console. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| consoleID | The ID number of the gaming console that the support worker plays. | SMALLINT UNSIGNED | X |  | X | GamingConsole (consoleID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -380,7 +400,13 @@ This table links support worker accounts to their selected gaming console prefer
 
 This table maps the support worker's selected availability in one-hour blocks across the full seven-day week. This does not necessarily indicate the full working roster. It only indicates when a support worker would be available to commit to work shifts.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that is available at a particular one-hour block. during the week. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| dayNumber | The number representing the weekday of the one-hour block that the support worker is available for. (1=Monday, 2=Tuesday, etc) | TINYINT | X |  | X |  |  |
+| hourNumber | The number representing the hour of that one-hour block that the support worker is available for (0-23) | TINYINT | X |  | X |  |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -388,7 +414,12 @@ This table maps the support worker's selected availability in one-hour blocks ac
 
 This table links support worker accounts to their selected allergies. A support worker can optionally include one or multiple allergies to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that has a particular allergy. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| consoleID | The ID number of the allergy that the support worker has. | SMALLINT UNSIGNED | X |  | X | Allergy(allergyID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -396,7 +427,13 @@ This table links support worker accounts to their selected allergies. A support 
 
 This table links support worker accounts to their selected pet animals. A support worker can optionally include one or multiple animals to display on their profile, as well as the number of individuals that they own.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that has a pet animal. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| domesticAnimalID | The ID number of the domestic animal that the support worker keeps as a pet. | TINYINT UNSIGNED | X |  | X | DomesticAnimal (domesticAnimalID) |  |
+| petCount | The number of individual animals that the support worker owns. | TINYINT UNSIGNED | X |  |  |  | 1 |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -404,7 +441,12 @@ This table links support worker accounts to their selected pet animals. A suppor
 
 This table links support worker accounts to their selected 'Fears and Phobias'. A support worker can optionally include one or multiple fears to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that has a particular fear/phobia. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| fearPhobiaID | The ID number of the fear/phobia that the support worker has. | SMALLINT UNSIGNED | X |  | X | FearPhobia (fearPhobiaID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -412,7 +454,12 @@ This table links support worker accounts to their selected 'Fears and Phobias'. 
 
 This table links support worker accounts to the technological devices that they know how to use. A support worker must select at least one of the given options to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that knows how to use a particular technological device. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| technologyID | The ID number of the technological device that the support worker can use. | SMALLINT UNSIGNED | X |  | X | TechnologyForm (technologyID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -420,7 +467,12 @@ This table links support worker accounts to the technological devices that they 
 
 This table links support worker accounts to their formal study qualifications. A support worker must select at least one qualification option to display on their profile.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that holds a particular study qualification. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| qualificationID | The ID number of the study qualification that the support worker holds. | SMALLINT UNSIGNED | X |  | X | Qualification (qualificationID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -428,7 +480,13 @@ This table links support worker accounts to their formal study qualifications. A
 
 This table links support worker accounts to the areas of experience that they feel confident in. A support worker must select at least one experience area to display on their profile, along with an optional description.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that is experienced in a particular area. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| experienceAreaID | The ID number of the area that the support worker is experienced with | SMALLINT UNSIGNED | X |  | X | ExperienceArea (experienceAreaID) |  |
+| experienceDesc | Text that the support worker uses to describe how they are experienced in that area, including example scenarios. | VARCHAR(1000) |  |  |  |  |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -436,7 +494,17 @@ This table links support worker accounts to the areas of experience that they fe
 
 This table stores information about the prospective support worker's employment history to display on their profile. Including this information is optional.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker that has held a previous job position. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| positionNumber | The order number of that job position for a particular support worker. | TINYINT UNSIGNED | X |  | X |  | Increments per Support Worker |
+| positionTitle | The title that the support worker held as part of that job position. | VARCHAR(200) | X |  |  |  |  |
+| positionCompany | The company that the support worker held the job position with. | VARCHAR(200) | X |  |  |  |  |
+| positionDesc | A description of the job position including the duties and responsibilities. | VARCHAR(1000) | X |  |  |  |  |
+| startDate | The date that the support worker commenced the job position. | DATE | X |  |  |  |  |
+| endDate | The date that the support worker finished the job position. If this is empty, the position is current. | DATE |  |  |  |  |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -444,7 +512,22 @@ This table stores information about the prospective support worker's employment 
 
 This table stores 'other' text that the support worker has written to display on their profile for different sections. This is used to supplement the options chosen from lists such as 'Other Languages' where the allowed items might not be detailed enough for a complete profile. Writing text for these fields is optional.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| supportWorkerID | The ID number of the support worker profile. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| otherPersonality | Other description for personality traits. | VARCHAR(1000) |  |  |  |  |  |
+| otherHobbies | Other description for hobbies. | VARCHAR(1000) |  |  |  |  |  |
+| otherGaming | Other description for video games. | VARCHAR(1000) |  |  |  |  |  |
+| otherPets | Other description for pets. | VARCHAR(1000) |  |  |  |  |  |
+| otherAllergies | Other description for allergies. | VARCHAR(1000) |  |  |  |  |  |
+| otherFears | Other description for fears and phobias. | VARCHAR(1000) |  |  |  |  |  |
+| otherTechnology | Other description for technology usage. | VARCHAR(1000) |  |  |  |  |  |
+| otherQualifications | Other description for study qualifications. | VARCHAR(1000) |  |  |  |  |  |
+| otherExperienceAreas | Other description for experience areas. | VARCHAR(1000) |  |  |  |  |  |
+| otherAvailability | Other description related to availability. | VARCHAR(1000) |  |  |  |  |  |
+| otherGeneral | Additional text for anything that does not fit into the above 			sections. | VARCHAR(1000) |  |  |  |  |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -452,7 +535,21 @@ This table stores 'other' text that the support worker has written to display on
 
 This table contains data about employers that are registered onto the Workforce Link system. When an employer is registered onto the system, they can search for support workers, view their profiles, and request interviews.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| employerID | The ID number of the employer account. | SMALLINT UNSIGNED | X | X | X |  | AUTO_INCREMENT |
+| employerAccessCode | The access code used to log into the employer account. | VARCHAR(100) | X | X |  |  |  |
+| registerTimestamp | The date and time that the employer account was registered on. | DATETIME | X |  |  |  | NOW() |
+| onlineContactFlag | Flag as to whether the employer can be contacted online. (eg. 			E-Mail) | TINYINT(1) | X |  |  |  | 1 |
+| businessName | The name of the business that employs support workers. | VARCHAR(200) | X |  |  |  |  |
+| businessAddress | The physical street address of the business. | VARCHAR(300) | X |  |  |  |  |
+| contactName | The full name of the person to contact within the business. | VARCHAR(100) | X |  |  |  |  |
+| contactPosition | The job title of the contact person. | VARCHAR(100) | X |  |  |  |  |
+| contactEmail | The E-Mail address of the contact person. | VARCHAR(150) | X | X |  |  |  |
+| contactPhone | The phone number of the contact person. | CHAR(10) | X | X |  |  |  |
+| websiteURL | The URL of the business website. | VARCHAR(300) | X |  |  |  |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -460,7 +557,13 @@ This table contains data about employers that are registered onto the Workforce 
 
 This table includes data about recommendations to employers made by Workforce Link to consider recruiting these support workers for job roles.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| recommendationID | The ID number of a recommendation. | INT | X | X | X |  | AUTO_INCREMENT |
+| employerID | The ID number of the employer that the support workers are being recommended to. | SMALLINT UNSIGNED | X |  |  | Employer (employerID) |  |
+| recommendationTimestamp | The date and time of the recommendation. | DATETIME | X |  |  |  | NOW() |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -468,7 +571,12 @@ This table includes data about recommendations to employers made by Workforce Li
 
 This table links support workers to recommendations made on their behalf. A support worker can be recommended multiple times, and multiple support workers can be recommended to an employer in the same batch.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| recommendationID | The ID number of the recommendation that the support worker is part of. | INT | X |  | X | Recommendation (recommendationID) |  |
+| supportWorkerID | The ID number of the support worker being recommended to the employer. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -476,7 +584,13 @@ This table links support workers to recommendations made on their behalf. A supp
 
 This table includes data about requests made by registered employers to interview chosen support workers for job roles.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| interviewRequestID | The ID number of the interview request. | INT | X | X | X |  | AUTO_INCREMENT |
+| employerID | The ID number of the employer that is requesting an interview with a support worker. | SMALLINT UNSIGNED | X |  |  | Employer (employerID) |  |
+| requestTimestamp | The date and time of the interview request. | DATETIME | X |  |  |  | NOW() |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
@@ -484,7 +598,12 @@ This table includes data about requests made by registered employers to intervie
 
 This table links support workers to the interview requests that have been sent. A support worker can be requested multiple times (Even by the same employer). Multiple support workers can be requested by an employer in the same batch.
 
-*COLUMNS*
+| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
+|---|---|---|---|---|---|---|---|
+| interviewRequestID | The ID number of the interview request being made between an employer and support worker. | INT | X |  | X | InterviewRequest (interviewRequestID) |  |
+| supportWorkerID | The ID number of the support worker being requested for an interview. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
+| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
+
 
 ---
 
