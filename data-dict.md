@@ -92,7 +92,10 @@ This table stores a list of suburbs and towns that are serviced by Workforce Lin
 
 This table stores a hard-coded list of languages other than English that support workers can select as being speakers of. For example, a worker who  previously lived in China might be able to speak Chinese as one of their languages, so they can include that on their profile. Languages can be used as criteria when searching for support workers.
 
-*COLUMNS*
+|  			Name 		         |  			Description 		                           |  			Data Type 		        |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|----------------|-----------------------------------------|--------------------|------------|----------|---------------|---------------|------------------|
+|  			languageID 		   |  			The ID number of the language option. 		 |  			TINYINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			languageName 		 |  			The name of the spoken language. 		      |  			VARCHAR(50) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
 
 ---
 
@@ -100,7 +103,10 @@ This table stores a hard-coded list of languages other than English that support
 
 This table stores a hard-coded list of cultural backgrounds that support workers can select as being a part of. This is not necessarily the same thing as spoken language. It simply indicates what culture they identify with. The cultural background is displayed on the support worker's profile can be used as search criteria.
 
-*COLUMNS*
+|  			Name 		                   |  			Description 		                                      |  			Data Type 		        |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|--------------------------|----------------------------------------------------|--------------------|------------|----------|---------------|---------------|------------------|
+|  			culturalBackgroundID 		   |  			The ID number of the cultural background option. 		 |  			TINYINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			culturalBackgroundName 		 |  			The name of the cultural background. 		             |  			VARCHAR(50) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
 
 ---
 
@@ -108,7 +114,11 @@ This table stores a hard-coded list of cultural backgrounds that support workers
 
 This table stores a hard-coded list of fears and phobias that support workers can select to display on their profile. When searching for support workers, these fears and phobias can be included as criteria.
 
-*COLUMNS*
+|  			Name 		           |  			Description 		                              |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|------------------|--------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			fearPhobiaID 		   |  			The ID number of the fear/phobia option. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			fearPhobiaName 		 |  			The name of the fear/phobia. 		             |  			VARCHAR(50) 		       |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		     |  			Flag as to whether this row is active. 		   |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -116,7 +126,11 @@ This table stores a hard-coded list of fears and phobias that support workers ca
 
 This table stores a hard-coded list of technological devices that a support worker might need to know how to use when performing these duties. This includes smartphones, computers, and tablets. This is displayed on the support worker's profile and can be used as search criteria.
 
-*COLUMNS*
+|  			Name 		           |  			Description 		                             |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|------------------|-------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			technologyID 		   |  			The ID number of the technology option. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			technologyName 		 |  			The name of the technology option. 		      |  			VARCHAR(50) 		       |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		     |  			Flag as to whether this row is active. 		  |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -124,7 +138,11 @@ This table stores a hard-coded list of technological devices that a support work
 
 This table stores a hard-coded list of tertiary qualifications that a person might study in order to become a support worker. These qualifications are included on a support worker's profile and searched for as criteria.
 
-*COLUMNS*
+|  			Name 		              |  			Description 		                               |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|---------------------|---------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			qualificationID 		   |  			The ID number of the study qualification. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			qualificationName 		 |  			The name of the study qualification. 		      |  			VARCHAR(150) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		        |  			Flag as to whether this row is active. 		    |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -132,7 +150,11 @@ This table stores a hard-coded list of tertiary qualifications that a person mig
 
 This table stores a hard-coded list of particular disabilities and conditions that a support worker has direct experience working with. While a qualification might teach theory, this relates more to putting this theory into practice when working with clients. If a support worker has experience in a particular area, they can add it to their profile along with an optional description. When searching for support workers, these experience areas can be included as criteria.
 
-*COLUMNS*
+|  			Name 		               |  			Description 		                                  |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|----------------------|------------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			experienceAreaID 		   |  			The ID number of the experience area option. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			experienceAreaName 		 |  			The name of the experience area option. 		      |  			VARCHAR(100) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		         |  			Flag as to whether this row is active. 		       |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -140,7 +162,12 @@ This table stores a hard-coded list of particular disabilities and conditions th
 
 This table stores a hard-coded list of checks and clearances that a support worker might be required to hold in order to work with clients. This includes things such as [Blue Cards](https://www.qld.gov.au/law/laws-regulated-industries-and-accountability/queensland-laws-and-regulations/regulated-industries-and-licensing/blue-card-services), First Aid certifications, and police checks. If a support worker has a particular check or clearance, they can add it to their profile. These checks and clearances can be displayed on a support worker's profile and searched for as criteria.
 
-*COLUMNS*
+|  			Name 		               |  			Description 		                                    |  			Data Type 		        |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|----------------------|--------------------------------------------------|--------------------|------------|----------|---------------|---------------|------------------|
+|  			checkClearanceID 		   |  			The ID number of the check/clearance option. 		   |  			TINYINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			checkClearanceName 		 |  			The name of the check/clearance option. 		        |  			VARCHAR(100) 		     |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			checkClearanceDesc 		 |  			The description of the check/clearance option. 		 |  			VARCHAR(300) 		     |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		         |  			Flag as to whether this row is active. 		         |  			TINYINT(1) 		       |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -148,7 +175,11 @@ This table stores a hard-coded list of checks and clearances that a support work
 
 This table stores a hard-coded list of personality traits that a support worker can use to describe themselves on their profile. When searching for prospective support workers, these set personality traits can be included in the criteria. These personality traits can be displayed on a support worker's profile and searched for as criteria.
 
-*COLUMNS*
+|  			Name 		       |  			Description 		                                    |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|--------------|--------------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			traitID 		    |  			The ID number of the personality trait option. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			traitName 		  |  			The name of the personality trait option.. 		     |  			VARCHAR(50) 		       |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		 |  			Flag as to whether this row is active. 		         |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
