@@ -2,12 +2,13 @@
 
 **./data-dict.md**
 * Added description text for tables:
-	* SupportWorker
-	* Employer
-	* InterviewRequest
-* Rewrote profile display for tables:
-	* CulturalBackground
-	* Qualification
-	* CheckClearance
-	* PersonalityTrait
-	* Hobby
+	* SupportWorkerOtherLanguages
+	* SupportWorkerChecks
+	* SupportWorkerPersonality
+	* SupportWorkerHobbies
+	* SupportWorkerGaming
+	* SupportWorkerAllergies
+	* SupportWorkerFears
+	* SupportWorkerTechnology
+	* SupportWorkerQualifications
+	* SupportWorkerRequest

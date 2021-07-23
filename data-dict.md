@@ -216,7 +216,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerOtherLanguages
 
-*DESCRIPTION*
+This table links support worker accounts to their selected 'Other Languages'. A support worker can optionally include one or multiple languages to display on their profile.
 
 *COLUMNS*
 
@@ -224,7 +224,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerChecks
 
-*DESCRIPTION*
+This table links support worker accounts to their selected 'Checks and Clearances'. A support worker must have at least one selected check or clearance to display on their profile.
 
 *COLUMNS*
 
@@ -232,7 +232,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerPersonality
 
-*DESCRIPTION*
+This table links support worker accounts to their selected personality traits. A support worker must select at least one trait to display on their profile.
 
 *COLUMNS*
 
@@ -240,7 +240,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerHobbies
 
-*DESCRIPTION*
+This table links support worker accounts to their selected hobbies. A support worker must select at least one hobby to display on their profile.
 
 *COLUMNS*
 
@@ -248,7 +248,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerGaming
 
-*DESCRIPTION*
+This table links support worker accounts to their selected gaming console preferences. A support worker can optionally include one or multiple consoles to display on their profile.
 
 *COLUMNS*
 
@@ -264,7 +264,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerAllergies
 
-*DESCRIPTION*
+This table links support worker accounts to their selected allergies. A support worker can optionally include one or multiple allergies to display on their profile.
 
 *COLUMNS*
 
@@ -280,7 +280,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerFears
 
-*DESCRIPTION*
+This table links support worker accounts to their selected 'Fears and Phobias'. A support worker can optionally include one or multiple fears to display on their profile.
 
 *COLUMNS*
 
@@ -288,7 +288,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerTechnology
 
-*DESCRIPTION*
+This table links support worker accounts to the technological devices that they know how to use. A support worker must select at least one of the given options to display on their profile.
 
 *COLUMNS*
 
@@ -296,7 +296,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 
 ## SupportWorkerQualifications
 
-*DESCRIPTION*
+This table links support worker accounts to their formal study qualifications. A support worker must select at least one qualification option to display on their profile.
 
 *COLUMNS*
 
@@ -360,11 +360,10 @@ This table includes data about requests made by registered employers to intervie
 
 ## SupportWorkerRequest
 
-*DESCRIPTION*
+This table links support workers to the interview requests that have been sent. A support worker can be requested multiple times (Even by the same employer). Multiple support workers can be requested in the same batch.
 
 *COLUMNS*
 
 ---
 
 *FOOTER*
-
