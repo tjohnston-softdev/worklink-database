@@ -1,16 +1,16 @@
 USE linkServicesGroup;
 
 INSERT INTO CheckClearance (checkClearanceName, checkClearanceDesc) VALUES
-('Willing to obtain', 'This Support Worker is willing to obtain any checks or clearances necessary for a job role'),
-('First Aid', 'This Support Worker has the skills and training required to perform First Aid'),
-('Blue Card', 'This Support Worker is suitable for working with children and youth'),
-('Criminal History Check', 'This Support Worker has undergone and passed a Criminal History check'),
-('Police Check', 'This Support Worker has undergone and passed a Police check'),
-('Insurance Check', 'This Support Worker has a required and up-to-date insurance policy'),
-('Mental Health', 'This Support Worker has the skills necessary to assist people who are experiencing mental illness'),
-('Hand Hygene and Infection Control', 'This Support Worker has knowledge regarding hand hygene practices and preventing the spread of infections'),
-('Manual Handling', 'This Support Worker has the formal training and qualification necessary for manual handling and labour tasks'),
-('Worker Orientation Module', 'This module is an interactive online course that explains the obligations of workers under the NDIS Code of Conduct.');
+('Willing to obtain', 'DESC'),
+('First Aid', 'DESC'),
+('Blue Card', 'DESC'),
+('Criminal History Check', 'DESC'),
+('Police Check', 'DESC'),
+('Insurance Check', 'DESC'),
+('Mental Health', 'DESC'),
+('Hand Hygene and Infection Control', 'DESC'),
+('Manual Handling', 'DESC'),
+('Worker Orientation Module', 'DESC');
 
 
 INSERT INTO Qualification (qualificationName) VALUES
