@@ -256,7 +256,7 @@ This table links support worker accounts to their selected gaming console prefer
 
 ## SupportWorkerAvaliability
 
-*DESCRIPTION*
+This table maps the support worker's selected availability in one-hour blocks across the full seven-day week. This does not necessarily indicate the full working roster. It only indicates when a support worker would be available to commit to work shifts.
 
 *COLUMNS*
 
@@ -312,7 +312,7 @@ This table links support worker accounts to the areas of experience that they fe
 
 ## SupportWorkerPreviousExperience
 
-*DESCRIPTION*
+This table stores information about the prospective support worker's employment history to display on their profile. Including this information is optional.
 
 *COLUMNS*
 
@@ -320,7 +320,7 @@ This table links support worker accounts to the areas of experience that they fe
 
 ## SupportWorkerOther
 
-*DESCRIPTION*
+This table stores 'other' text that the support worker has written to display on their profile for different sections. This is used to supplement the options chosen from lists such as 'Other Languages' where the allowed items might not be detailed enough for a complete profile. Writing text for these fields is optional.
 
 *COLUMNS*
 
