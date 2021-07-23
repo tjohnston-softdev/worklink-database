@@ -82,7 +82,7 @@ This table stores a hard-coded list of languages other than English that support
 
 ## CulturalBackground
 
-This table stores a hard-coded list of cultural backgrounds that support workers can select as being a part of. This is not necessarily the same thing as spoken language. It simply indicates what culture they identify with. Cultural backgrounds can be used as criteria when searching for support workers.
+This table stores a hard-coded list of cultural backgrounds that support workers can select as being a part of. This is not necessarily the same thing as spoken language. It simply indicates what culture they identify with. The cultural background is displayed on the support worker's profile can be used as search criteria.
 
 *COLUMNS*
 
@@ -98,7 +98,7 @@ This table stores a hard-coded list of fears and phobias that support workers ca
 
 ## TechnologyForm
 
-This table stores a hard-coded list of technological devices that a support worker might need to know how to use when performing these duties. This includes smartphones, computers, and tablets. This is displayed on the support worker's profile and can be searched for as criteria.
+This table stores a hard-coded list of technological devices that a support worker might need to know how to use when performing these duties. This includes smartphones, computers, and tablets. This is displayed on the support worker's profile and can be used as search criteria.
 
 *COLUMNS*
 
@@ -106,7 +106,7 @@ This table stores a hard-coded list of technological devices that a support work
 
 ## Qualification
 
-This table stores a hard-coded list of tertiary qualifications that a person might study in order to become a support worker. These qualifications can be added to a support worker's profile and searched for as criteria.
+This table stores a hard-coded list of tertiary qualifications that a person might study in order to become a support worker. These qualifications are included on a support worker's profile and searched for as criteria.
 
 *COLUMNS*
 
@@ -122,7 +122,7 @@ This table stores a hard-coded list of particular disabilities and conditions th
 
 ## CheckClearance
 
-This table stores a hard-coded list of checks and clearances that a support worker might be required to hold in order to work with clients. This includes things such as [Blue Cards](https://www.qld.gov.au/law/laws-regulated-industries-and-accountability/queensland-laws-and-regulations/regulated-industries-and-licensing/blue-card-services), First Aid certifications, and police checks. If a support worker has a particular check or clearance, they can add it to their profile. These checks and clearances can be added to a support worker's profile and searched for as criteria.
+This table stores a hard-coded list of checks and clearances that a support worker might be required to hold in order to work with clients. This includes things such as [Blue Cards](https://www.qld.gov.au/law/laws-regulated-industries-and-accountability/queensland-laws-and-regulations/regulated-industries-and-licensing/blue-card-services), First Aid certifications, and police checks. If a support worker has a particular check or clearance, they can add it to their profile. These checks and clearances can be displayed on a support worker's profile and searched for as criteria.
 
 *COLUMNS*
 
@@ -130,7 +130,7 @@ This table stores a hard-coded list of checks and clearances that a support work
 
 ## PersonalityTrait
 
-This table stores a hard-coded list of personality traits that a support worker can use to describe themselves on their profile. When searching for prospective support workers, these set personality traits can be included in the criteria. These personality traits can be added to a support worker's profile and searched for as criteria.
+This table stores a hard-coded list of personality traits that a support worker can use to describe themselves on their profile. When searching for prospective support workers, these set personality traits can be included in the criteria. These personality traits can be displayed on a support worker's profile and searched for as criteria.
 
 *COLUMNS*
 
@@ -138,7 +138,7 @@ This table stores a hard-coded list of personality traits that a support worker 
 
 ## Hobby
 
-This table stores a hard-coded list of hobbies that a support worker might enjoy outside of work. These hobbies can be added to a support worker's profile and searched for as criteria. Hobbies are sorted into different categories which makes them easier to display and select when editing a profile or performing a search.
+This table stores a hard-coded list of hobbies that a support worker might enjoy outside of work. These hobbies can be displayed on a support worker's profile and searched for as criteria. Hobbies are sorted into different categories which makes them easier to display and select when editing a profile or performing a search.
 
 *COLUMNS*
 
@@ -206,7 +206,9 @@ This is a sub-class of 'ReferralSource'.
 
 ## SupportWorker
 
-*DESCRIPTION*
+This table contains data about support workers that are registered onto the Workforce Link system. When a support worker registers and activates their profile, employers are able to search and view these profiles based on criteria. This is the parent table for support worker accounts. It includes their login details, necessary personal information, and basic profile contents such as 'About Me'.
+
+The below 'SupportWorker_____' tables include further profile information such as hard-coded list values.
 
 *COLUMNS*
 
@@ -326,7 +328,7 @@ This is a sub-class of 'ReferralSource'.
 
 ## Employer
 
-*DESCRIPTION*
+This table contains data about employers that are registered onto the Workforce Link system. When an employer is registered onto the system, they can search for support workers, view their profiles, and request interviews.
 
 *COLUMNS*
 
@@ -350,7 +352,7 @@ This is a sub-class of 'ReferralSource'.
 
 ## InterviewRequest
 
-*DESCRIPTION*
+This table includes data about requests made by registered employers to interview chosen support workers for job roles.
 
 *COLUMNS*
 
@@ -365,3 +367,4 @@ This is a sub-class of 'ReferralSource'.
 ---
 
 *FOOTER*
+
