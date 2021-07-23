@@ -2,11 +2,11 @@
 
 **./data-dict.md**
 * Added column information to these tables:
-	* OtherLanguages
-	* CulturalBackground
-	* FearPhobia
-	* TechnologyForm
-	* Qualification
-	* ExperienceArea
-	* CheckClearance
-	* PersonalityTrait
+	* Hobby
+	* HobbyCategory
+	* HobbyGrouping
+	* GamingConsole
+	* Allergy
+	* DomesticAnimal
+	* ReferralSource
+	* ReferralSourceCompany

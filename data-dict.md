@@ -187,7 +187,11 @@ This table stores a hard-coded list of personality traits that a support worker 
 
 This table stores a hard-coded list of hobbies that a support worker might enjoy outside of work. These hobbies can be displayed on a support worker's profile and searched for as criteria. Hobbies are sorted into different categories which makes them easier to display and select when editing a profile or performing a search.
 
-*COLUMNS*
+|  			Name 		       |  			Description 		                            |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|--------------|------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			hobbyID 		    |  			The ID number of the hobby option. 		     |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			hobbyName 		  |  			The name of the hobby option.. 		         |  			VARCHAR(50) 		       |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		 |  			Flag as to whether this row is active. 		 |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -195,7 +199,11 @@ This table stores a hard-coded list of hobbies that a support worker might enjoy
 
 This table stores a list of categories used to group hobbies.
 
-*COLUMNS*
+|  			Name 		              |  			Description 		                            |  			Data Type 		        |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|---------------------|------------------------------------------|--------------------|------------|----------|---------------|---------------|------------------|
+|  			hobbyCategoryID 		   |  			The ID number of the hobby category. 		   |  			TINYINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			hobbyCategoryName 		 |  			The name of the hobby category. 		        |  			VARCHAR(50) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		        |  			Flag as to whether this row is active. 		 |  			TINYINT(1) 		       |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -203,7 +211,11 @@ This table stores a list of categories used to group hobbies.
 
 This table is used to assign hobbies to particular categories. A hobby can belong to more than one category.
 
-*COLUMNS*
+|  			Name 		            |  			Description 		                                                         |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		                     |  			Default 		 |
+|-------------------|-----------------------------------------------------------------------|---------------------|------------|----------|---------------|-----------------------------------|-----------|
+|  			hobbyID 		         |  			The ID number of the hobby being assigned to a particular 			category. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			   			 		    |  			X 		           |  			Hobby (hobbyID) 		                 |  			   			 		     |
+|  			hobbyCategoryID 		 |  			The ID number of the category that this hobby is being assigned 			to. 		 |  			TINYINT UNSIGNED 		  |  			X 		        |  			   			 		    |  			X 		           |  			HobbyCategory (hobbyCategoryID) 		 |  			   			 		     |
+|  			activeFlag 		      |  			Flag as to whether this  row is active. 		                             |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		                             |  			1 		       |
 
 ---
 
@@ -211,7 +223,11 @@ This table is used to assign hobbies to particular categories. A hobby can belon
 
 This table stores a hard-coded list of gaming consoles that a support worker might enjoy playing. This includes PlayStation, Xbox, Nintendo, and others. These preferences are displayed on the support worker's profile and can be searched for as criteria.
 
-*COLUMNS*
+|  			Name 		        |  			Description 		                                 |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|---------------|-----------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			consoleID 		   |  			The ID number of the gaming console option. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			consoleName 		 |  			The name of the gaming console option. 		      |  			VARCHAR(50) 		       |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		  |  			Flag as to whether this row is active. 		      |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -219,7 +235,11 @@ This table stores a hard-coded list of gaming consoles that a support worker mig
 
 This table stores a hard-coded list of allergies that a support worker might be affected by. An example would be an intolerance to gluten. These allergies are displayed on a support worker's profile and can be included in the search criteria.
 
-*COLUMNS*
+|  			Name 		        |  			Description 		                            |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|---------------|------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			allergyID 		   |  			The ID number of the allergy option. 		   |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			allergyName 		 |  			The name of the allergy option. 		        |  			VARCHAR(50) 		       |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		  |  			Flag as to whether this row is active. 		 |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -227,7 +247,11 @@ This table stores a hard-coded list of allergies that a support worker might be 
 
 This table stores a hard-coded list of domestic animals that a support worker might keep as pets, such as Cats and Dogs. Any pet animals will be displayed on the support worker's profile and can be included in the search criteria.
 
-*COLUMNS*
+|  			Name 		               |  			Description 		                                  |  			Data Type 		        |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|----------------------|------------------------------------------------|--------------------|------------|----------|---------------|---------------|------------------|
+|  			domesticAnimalID 		   |  			The ID number of the domestic animal option. 		 |  			TINYINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			domesticAnimalName 		 |  			The name of the domestic animal option. 		      |  			VARCHAR(50) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		         |  			Flag as to whether this row is active. 		       |  			TINYINT(1) 		       |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -237,7 +261,13 @@ This table stores known referral sources that indicate how the prospective suppo
 
 This only includes generic information about the referral source. If they are a company, the contact details are stored in 'ReferralSourceCompany'.
 
-*COLUMNS*
+|  			Name 		               |  			Description 		                                                                  |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		 |  			Default 		        |
+|----------------------|--------------------------------------------------------------------------------|---------------------|------------|----------|---------------|---------------|------------------|
+|  			referralSourceID 		   |  			The ID number of the referral source entry. 		                                  |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			   			 		         |  			AUTO_INCREMENT 		 |
+|  			referralSourceName 		 |  			The name of the referral source entry. 		                                       |  			VARCHAR(100) 		      |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			registerTimestamp 		  |  			The date and time that the referral source was registered into the 			database. 		 |  			DATETIME 		          |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			NOW() 		          |
+|  			websiteURL 		         |  			The URL of the referral source's website, if any. 		                            |  			VARCHAR(300) 		      |  			   			 		      |  			   			 		    |  			   			 		         |  			   			 		         |  			   			 		            |
+|  			activeFlag 		         |  			Flag as to whether this row is active. 		                                       |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		         |  			1 		              |
 
 ---
 
@@ -247,7 +277,14 @@ This table includes information about referral sources that are specific compani
 
 This is a sub-class of 'ReferralSource'.
 
-*COLUMNS*
+|  			Name 		             |  			Description 		                                                                   |  			Data Type 		         |  			Required 		 |  			Unique 		 |  			Primary Key 		 |  			Foreign Key 		                       |  			Default 		 |
+|--------------------|---------------------------------------------------------------------------------|---------------------|------------|----------|---------------|-------------------------------------|-----------|
+|  			referralSourceID 		 |  			The ID number of the referral source entry that refers to a 			specific company. 		 |  			SMALLINT UNSIGNED 		 |  			X 		        |  			X 		      |  			X 		           |  			ReferralSource (referralSourceID) 		 |  			   			 		     |
+|  			companyAddress 		   |  			The physical street address of the company. 		                                   |  			VARCHAR(300) 		      |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		                               |  			   			 		     |
+|  			consultantName 		   |  			The full name of the person to contact within the company. 		                    |  			VARCHAR(100) 		      |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		                               |  			   			 		     |
+|  			consultantEmail 		  |  			The E-Mail address of the contact person. 		                                     |  			VARCHAR(150) 		      |  			X 		        |  			X 		      |  			   			 		         |  			   			 		                               |  			   			 		     |
+|  			consultantPhone 		  |  			The phone number of the contact person. 		                                       |  			CHAR(10) 		          |  			X 		        |  			X 		      |  			   			 		         |  			   			 		                               |  			   			 		     |
+|  			activeFlag 		       |  			Flag as to whether this row is active. 		                                        |  			TINYINT(1) 		        |  			X 		        |  			   			 		    |  			   			 		         |  			   			 		                               |  			1 		       |
 
 ---
 
