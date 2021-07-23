@@ -2,13 +2,10 @@
 
 **./data-dict.md**
 * Added description text for tables:
-	* SupportWorkerOtherLanguages
-	* SupportWorkerChecks
-	* SupportWorkerPersonality
-	* SupportWorkerHobbies
-	* SupportWorkerGaming
-	* SupportWorkerAllergies
-	* SupportWorkerFears
-	* SupportWorkerTechnology
-	* SupportWorkerQualifications
+	* SupportWorkerPets
+	* SupportWorkerExperienceAreas
+	* Recommendation
+	* SupportWorkerRecommendation
+* Revised description text for tables:
+	* SupportWorker
 	* SupportWorkerRequest

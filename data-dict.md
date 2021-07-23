@@ -206,7 +206,7 @@ This is a sub-class of 'ReferralSource'.
 
 ## SupportWorker
 
-This table contains data about support workers that are registered onto the Workforce Link system. When a support worker registers and activates their profile, employers are able to search and view these profiles based on criteria. This is the parent table for support worker accounts. It includes their login details, necessary personal information, and basic profile contents such as 'About Me'.
+This table contains data about support workers that are registered onto the Workforce Link system. When a support worker registers and activates their account, employers are able to search and view the available profiles based on criteria. This is the parent table for support worker accounts. It includes their login details, necessary personal information, and basic profile contents such as 'About Me'.
 
 The below 'SupportWorker_____' tables include further profile information such as hard-coded list values.
 
@@ -272,7 +272,7 @@ This table links support worker accounts to their selected allergies. A support 
 
 ## SupportWorkerPets
 
-*DESCRIPTION*
+This table links support worker accounts to their selected pet animals. A support worker can optionally include one or multiple animals to display on their profile, as well as the number of individuals that they own.
 
 *COLUMNS*
 
@@ -304,7 +304,7 @@ This table links support worker accounts to their formal study qualifications. A
 
 ## SupportWorkerExperienceAreas
 
-*DESCRIPTION*
+This table links support worker accounts to the areas of experience that they feel confident in. A support worker must select at least one experience area to display on their profile, along with an optional description.
 
 *COLUMNS*
 
@@ -336,7 +336,7 @@ This table contains data about employers that are registered onto the Workforce 
 
 ## Recommendation
 
-*DESCRIPTION*
+This table includes data about recommendations to employers made by Workforce Link to consider recruiting these support workers for job roles.
 
 *COLUMNS*
 
@@ -344,7 +344,7 @@ This table contains data about employers that are registered onto the Workforce 
 
 ## SupportWorkerRecommendation
 
-*DESCRIPTION*
+This table links support workers to recommendations made on their behalf. A support worker can be recommended multiple times, and multiple support workers can be recommended to an employer in the same batch.
 
 *COLUMNS*
 
@@ -360,7 +360,7 @@ This table includes data about requests made by registered employers to intervie
 
 ## SupportWorkerRequest
 
-This table links support workers to the interview requests that have been sent. A support worker can be requested multiple times (Even by the same employer). Multiple support workers can be requested in the same batch.
+This table links support workers to the interview requests that have been sent. A support worker can be requested multiple times (Even by the same employer). Multiple support workers can be requested by an employer in the same batch.
 
 *COLUMNS*
 
