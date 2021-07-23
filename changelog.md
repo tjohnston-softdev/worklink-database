@@ -2,11 +2,6 @@
 
 **./data-dict.md**
 * Added column information to these tables:
-	* Hobby
-	* HobbyCategory
-	* HobbyGrouping
-	* GamingConsole
-	* Allergy
-	* DomesticAnimal
-	* ReferralSource
-	* ReferralSourceCompany
+	* SupportWorker
+	* SupportWorkerOtherLanguages
+* Minimized column information markdown for tables before 'SupportWorker'
