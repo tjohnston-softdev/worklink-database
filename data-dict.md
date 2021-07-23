@@ -76,8 +76,6 @@ This table stores a list of suburbs and towns that are serviced by Workforce Lin
 
 This table stores a hard-coded list of languages other than English that support workers can select as being speakers of. For example, a worker who  previously lived in China might be able to speak Chinese as one of their languages, so they can include that on their profile. Languages can be used as criteria when searching for support workers.
 
-This version of the database uses the 'Languages' dataset from [Mockaroo](https://www.mockaroo.com/), along with options for 'Indigenous Australian' and 'Torres Strait Islander'. An 'Other' option has been included in case the user speaks another language that not included in the set.
-
 *COLUMNS*
 
 ---
@@ -85,8 +83,6 @@ This version of the database uses the 'Languages' dataset from [Mockaroo](https:
 ## CulturalBackground
 
 This table stores a hard-coded list of cultural backgrounds that support workers can select as being a part of. This is not necessarily the same thing as spoken language. It simply indicates what culture they identify with. Cultural backgrounds can be used as criteria when searching for support workers.
-
-Since cultural background is subjective, this version of the database only includes generic, geographical-based cultures such as 'West European'. There are also distinct list items for Indigenous Australian cultures. An 'Other' option has been included in case the user identifies as a culture not covered by the list.
 
 *COLUMNS*
 
@@ -96,15 +92,13 @@ Since cultural background is subjective, this version of the database only inclu
 
 This table stores a hard-coded list of fears and phobias that support workers can select to display on their profile. When searching for support workers, these fears and phobias can be included as criteria.
 
-This version of the database contains the top 20 most common phobias as listed by [FearOf.net](https://www.fearof.net/).
-
 *COLUMNS*
 
 ---
 
 ## TechnologyForm
 
-*DESCRIPTION*
+This table stores a hard-coded list of technological devices that a support worker might need to know how to use when performing these duties. This includes smartphones, computers, and tablets. This is displayed on the support worker's profile and can be searched for as criteria.
 
 *COLUMNS*
 
@@ -114,8 +108,6 @@ This version of the database contains the top 20 most common phobias as listed b
 
 This table stores a hard-coded list of tertiary qualifications that a person might study in order to become a support worker. These qualifications can be added to a support worker's profile and searched for as criteria.
 
-The qualifications included in this version of the database were hand-picked by the manager at Workforce Link. Most of these qualifications are TAFE-based but there are a couple of University Bachelor degrees as well. There are also 'Other' options for both formal qualifications and equivalent work experience.
-
 *COLUMNS*
 
 ---
@@ -123,8 +115,6 @@ The qualifications included in this version of the database were hand-picked by 
 ## ExperienceArea
 
 This table stores a hard-coded list of particular disabilities and conditions that a support worker has direct experience working with. While a qualification might teach theory, this relates more to putting this theory into practice when working with clients. If a support worker has experience in a particular area, they can add it to their profile along with an optional description. When searching for support workers, these experience areas can be included as criteria.
-
-This version of the database uses a generic list of disability categories based on the [National Disability Services](https://www.nds.org.au/disability-types-and-descriptions) website.
 
 *COLUMNS*
 
@@ -134,8 +124,6 @@ This version of the database uses a generic list of disability categories based 
 
 This table stores a hard-coded list of checks and clearances that a support worker might be required to hold in order to work with clients. This includes things such as [Blue Cards](https://www.qld.gov.au/law/laws-regulated-industries-and-accountability/queensland-laws-and-regulations/regulated-industries-and-licensing/blue-card-services), First Aid certifications, and police checks. If a support worker has a particular check or clearance, they can add it to their profile. These checks and clearances can be added to a support worker's profile and searched for as criteria.
 
-Similar to 'Qualification', the data stored in this version of the database was chosen by the Workforce Link manager. There are also options for support workers who are 'Willing to obtain', or 'Will pass'.
-
 *COLUMNS*
 
 ---
@@ -144,8 +132,6 @@ Similar to 'Qualification', the data stored in this version of the database was 
 
 This table stores a hard-coded list of personality traits that a support worker can use to describe themselves on their profile. When searching for prospective support workers, these set personality traits can be included in the criteria. These personality traits can be added to a support worker's profile and searched for as criteria.
 
-For this version of the database, I used the [personality system](https://sims.fandom.com/wiki/Personality#Qualities) from *The Sims 1* as list options. When creating a character, their personality can be graded with a 0-10 point scale on five different dimensions. (eg. Serious --> Playful)
-
 *COLUMNS*
 
 ---
@@ -153,10 +139,6 @@ For this version of the database, I used the [personality system](https://sims.f
 ## Hobby
 
 This table stores a hard-coded list of hobbies that a support worker might enjoy outside of work. These hobbies can be added to a support worker's profile and searched for as criteria. Hobbies are sorted into different categories which makes them easier to display and select when editing a profile or performing a search.
-
-The hobbies and their categories in this version of the database was based on the [Discover A Hobby](https://www.discoverahobby.com/) website.
-
-
 
 *COLUMNS*
 
@@ -180,7 +162,7 @@ This table is used to assign hobbies to particular categories. A hobby can belon
 
 ## GamingConsole
 
-*DESCRIPTION*
+This table stores a hard-coded list of gaming consoles that a support worker might enjoy playing. This includes PlayStation, Xbox, Nintendo, and others. These preferences are displayed on the support worker's profile and can be searched for as criteria.
 
 *COLUMNS*
 
@@ -188,7 +170,7 @@ This table is used to assign hobbies to particular categories. A hobby can belon
 
 ## Allergy
 
-*DESCRIPTION*
+This table stores a hard-coded list of allergies that a support worker might be affected by. An example would be an intolerance to gluten. These allergies are displayed on a support worker's profile and can be included in the search criteria.
 
 *COLUMNS*
 
@@ -196,7 +178,7 @@ This table is used to assign hobbies to particular categories. A hobby can belon
 
 ## DomesticAnimal
 
-*DESCRIPTION*
+This table stores a hard-coded list of domestic animals that a support worker might keep as pets, such as Cats and Dogs. Any pet animals will be displayed on the support worker's profile and can be included in the search criteria.
 
 *COLUMNS*
 
@@ -204,7 +186,9 @@ This table is used to assign hobbies to particular categories. A hobby can belon
 
 ## ReferralSource
 
-*DESCRIPTION*
+This table stores known referral sources that indicate how the prospective support worker found out about Workforce Link. Support Workers will be asked to identify their referral source when registering their account. Examples of referral sources include job boards, social media, word of mouth, news articles, and more.
+
+This only includes generic information about the referral source. If they are a company, the contact details are stored in 'ReferralSourceCompany'.
 
 *COLUMNS*
 
@@ -212,7 +196,9 @@ This table is used to assign hobbies to particular categories. A hobby can belon
 
 ## ReferralSourceCompany
 
-*DESCRIPTION*
+This table includes information about referral sources that are specific companies. This includes their physical street address, and the details of the contact person within the company.
+
+This is a sub-class of 'ReferralSource'.
 
 *COLUMNS*
 
