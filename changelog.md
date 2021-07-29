@@ -1,4 +1,4 @@
 # Changelog
 
-**./test-data/p2-support_workers/**
-* Reintroducted support worker test data.
+**./info/references.md**
+* New file - Sources used for project.
