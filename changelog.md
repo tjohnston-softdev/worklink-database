@@ -1,3 +1,5 @@
 # Changelog
 
-Moved 'data-dict.md' to 'info' subfolder.
+**./info/data-dict.md**
+* Corrected link to project root.
+* Changed 'Last Updated'
