@@ -1,4 +1,3 @@
 # Changelog
 
-**./info/references.md**
-* New file - Sources used for project.
+Moved 'data-dict.md' to 'info' subfolder.
