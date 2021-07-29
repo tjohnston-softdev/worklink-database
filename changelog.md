@@ -1,5 +1,5 @@
 # Changelog
 
-**./info/data-dict.md**
-* Corrected link to project root.
-* Changed 'Last Updated'
+**./info/references.md**
+* ER Diagram: 'Relevant File' now links directly to SVG file.
+* Support Worker test data: Removed 'Relevant File' cell value.
