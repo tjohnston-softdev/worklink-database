@@ -1,4 +1,3 @@
 # Changelog
 
-**./test-data/p2-support_workers/readme.md**
-* Deleted file
+Renamed repository from 'workforce-link-database' to 'worklink-database'
