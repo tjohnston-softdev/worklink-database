@@ -165,7 +165,7 @@ CREATE TABLE ReferralSourceCompany
 CREATE TABLE SupportWorker
 (
 	supportWorkerID				INT						NOT NULL			PRIMARY KEY		AUTO_INCREMENT,
-	emailAddress				VARCHAR(150)			UNIQUE NOT NULL,
+	emailAddress				VARCHAR(300)			UNIQUE NOT NULL,
 	driversLicenseNumber		VARCHAR(32)				UNIQUE NOT NULL,
 	phoneContactNumber			VARCHAR(32)				UNIQUE NOT NULL,
 	firstName					VARCHAR(50)				NOT NULL,

@@ -300,7 +300,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 | Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
 |---|---|---|---|---|---|---|---|
 | supportWorkerID | The ID number of the support worker user account. | INT | X | X | X |  | AUTO_INCREMENT |
-| emailAddress | The E-Mail address used to log into the support worker user account. | VARCHAR(150) | X | X |  |  |  |
+| emailAddress | The E-Mail address used to log into the support worker user account. | VARCHAR(300) | X | X |  |  |  |
 | driversLicenseNumber | The drivers license number of the support worker. | VARCHAR(32) | X | X |  |  |  |
 | phoneContactNumber | The phone number used to contact the support worker. | VARCHAR(32) | X | X |  |  |  |
 | firstName | The support worker's first name. | VARCHAR(50) | X |  |  |  |  |

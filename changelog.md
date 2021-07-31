@@ -1,6 +1,3 @@
 # Changelog
 
-**./info/references.md**
-* The Sims 1
-	* Capitalized 'Qualities'
-	* Reformatted personality dimension example.
+Changed SupportWorker(emailAddress) maximum length from 150 to 300.
