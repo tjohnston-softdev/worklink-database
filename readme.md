@@ -23,7 +23,7 @@ Workforce Link is a start-up company that helps recruit prospective support work
 
 ## Other Documentation
 
-* [ER Diagram](./er-diagram/wf-link-db.svg)
+* [ER Diagram](./er-diagram/readme.md)
 * [Data Dictionary](./info/data-dict.md)
 * [Support Worker Test Data Generator](https://github.com/tjohnston-softdev/worklink-data-gen)
 * [Original Prototype Server](https://github.com/tjohnston-softdev/worklink-api-orig)
