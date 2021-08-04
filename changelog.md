@@ -1,11 +1,5 @@
 # Changelog
 
-**./test-data/p2-support_workers/**
-* Removed test data (SQL files)
-* Replaced index with placeholder. (readme.md)
-
----
-
-**./info/references.md**
-* Removed 'Support Worker test data' row.
-* Last Updated: 4 August 2021
+**./readme.md**
+* Rewrote 'Installing - Step #4' to refer to generating the data yourself.
+* Removed 'Installing - Step #6'. It has been merged into #4
