@@ -8,6 +8,8 @@ This repository is the schema of the database I designed while developing a prot
 
 Workforce Link is a start-up company that helps recruit prospective support workers for positions in the disability and healthcare industries. In April 2019, I was commissioned to design and implement an IT system to help streamline their loose, paper-based system. One of our goals was to host public profiles of our candidate staff that potential employers are able to search and view, similar to a social network. This was the MySQL database that I designed in order to facilitate the staff search engine.
 
+The definition SQL scripts are dated circa 26 November 2019 at approx. 12:30PM (AEST). They are exactly as-is except for increasing the size limit of some `VARCHAR` columns. The test data was re-created from scratch.
+
 ---
 
 ## Installing
@@ -38,6 +40,7 @@ Workforce Link is a start-up company that helps recruit prospective support work
 
 ## Disclaimer
 
-This database design is licensed under [MIT](https://opensource.org/licenses/MIT). You may use this as a basis both personal and commercial projects as long as attribution is given and the license remains intact. Although I will actively support this repository, I do not claim responsibility for if and how you use this alongside the [original prototype server](https://github.com/tjohnston-softdev/worklink-api-orig). Refer to that repository for more details. The 3rd-party test data used are property of their respective owners. Care has been taken to reference them appropriately and are not covered by this project's license.
+This database design is licensed under [MIT](https://opensource.org/licenses/MIT). You may use this as a basis both personal and commercial projects as long as attribution is given and the license remains intact. Although I will actively support this repository, I do not claim responsibility for if and how you use this alongside the [original prototype server](https://github.com/tjohnston-softdev/worklink-api-orig). Refer to that repository for more details. The 3rd-party test data used in this version of the database is property of their respective owners. Care has been taken to reference them appropriately and are not covered by this project's license.
+
 
 
