@@ -1,4 +1,4 @@
 # Changelog
 
 **./readme.md**
-* Wrote 'Further Development' section.
+* Replaced "as-is" with "as they were" in build date paragraph.

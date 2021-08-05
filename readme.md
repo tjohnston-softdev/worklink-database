@@ -8,7 +8,7 @@ This repository is the schema of the database I designed while developing a prot
 
 Workforce Link is a start-up company that helps recruit prospective support workers for positions in the disability and healthcare industries. In April 2019, I was commissioned to design and implement an IT system to help streamline their loose, paper-based system. One of our goals was to host public profiles of our candidate staff that potential employers are able to search and view, similar to a social network. This was the MySQL database that I designed in order to facilitate the staff search engine.
 
-The definition SQL scripts are dated circa 26 November 2019 at approx. 12:30PM (AEST). They are exactly as-is except for increasing the size limit of some `VARCHAR` columns. The test data was re-created from scratch.
+The definition SQL scripts are dated circa 26 November 2019 at approx. 12:30PM (AEST). They are exactly as they were except for increasing the size limit of some `VARCHAR` columns. The test data was re-created from scratch.
 
 ---
 
