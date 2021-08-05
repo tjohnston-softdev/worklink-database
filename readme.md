@@ -34,13 +34,12 @@ The definition SQL scripts are dated circa 26 November 2019 at approx. 12:30PM (
 
 ## Further Development
 
-*PLACEHOLDER*
+As of June 2021, I have decided to start cleaning up backup files of the IT system I designed for Workforce Link. On the 5th of August, I publicly released the database design, a 'Support Worker' test data generation script, and a prototype build of the final product.
+
+These repositories are currently based on the original prototype and, as such, are only intended for reference and not proper usage. I will spend the coming months developing an improved version of the system from scratch. Revised versions of the database and test data generator will be developed and released alongside this new system.
 
 ---
 
 ## Disclaimer
 
 This database design is licensed under [MIT](https://opensource.org/licenses/MIT). You may use this as a basis both personal and commercial projects as long as attribution is given and the license remains intact. Although I will actively support this repository, I do not claim responsibility for if and how you use this alongside the [original prototype server](https://github.com/tjohnston-softdev/worklink-api-orig). Refer to that repository for more details. The 3rd-party test data used in this version of the database is property of their respective owners. Care has been taken to reference them appropriately and are not covered by this project's license.
-
-
-
