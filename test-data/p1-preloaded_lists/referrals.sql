@@ -1,25 +1,25 @@
 USE linkServicesGroup;
 
 /* Generic sources */
-INSERT INTO ReferralSource (referralSourceName, websiteURL) VALUES
+INSERT INTO ReferralSource (referralSourceName, websiteURL, registerTimestamp) VALUES
 ('Search Engine', ''),
-('SEEK', 'https://www.seek.com.au/'),
-('Indeed', 'https://au.indeed.com/'),
-('LinkedIn', 'https://au.linkedin.com/'),
-('JobActive', 'https://jobsearch.gov.au/job/search'),
-('Facebook', 'https://www.facebook.com/'),
-('Gumtree', 'https://www.gumtree.com.au/'),
-('Word of Mouth', 'https://en.wikipedia.org/wiki/Word_of_mouth'),
-('Snapchat', 'https://www.snapchat.com/'),
-('Twitter', 'https://twitter.com/'),
-('Instagram', 'https://www.instagram.com/'),
-('News Article', ''),
-('Event', ''),
-('Advertising', ''),
-('University', ''),
-('TAFE', 'https://tafeqld.edu.au/'),
-('Registered Training Organization', ''),
-('Other', '');
+('SEEK', 'https://www.seek.com.au/', '2017-11-02 00:00:00'),
+('Indeed', 'https://au.indeed.com/', '2017-11-02 00:00:00'),
+('LinkedIn', 'https://au.linkedin.com/', '2017-11-02 00:00:00'),
+('JobActive', 'https://jobsearch.gov.au/job/search', '2017-11-02 00:00:00'),
+('Facebook', 'https://www.facebook.com/', '2017-11-02 00:00:00'),
+('Gumtree', 'https://www.gumtree.com.au/', '2017-11-02 00:00:00'),
+('Word of Mouth', 'https://en.wikipedia.org/wiki/Word_of_mouth', '2017-11-02 00:00:00'),
+('Snapchat', 'https://www.snapchat.com/', '2017-11-02 00:00:00'),
+('Twitter', 'https://twitter.com/', '2017-11-02 00:00:00'),
+('Instagram', 'https://www.instagram.com/', '2017-11-02 00:00:00'),
+('News Article', '', '2017-11-02 00:00:00'),
+('Event', '', '2017-11-02 00:00:00'),
+('Advertising', '', '2017-11-02 00:00:00'),
+('University', '', '2017-11-02 00:00:00'),
+('TAFE', 'https://tafeqld.edu.au/', '2017-11-02 00:00:00'),
+('Registered Training Organization', '', '2017-11-02 00:00:00'),
+('Other', '', '2017-11-02 00:00:00');
 
 /* Companies - Main */
 INSERT INTO ReferralSource (referralSourceName, registerTimestamp, websiteURL) VALUES
