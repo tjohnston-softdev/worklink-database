@@ -1,4 +1,4 @@
 # Changelog
 
-**./test-data/p1-preloaded_lists/readme.md**
-* Removed reference to 'Postcode' table.
+**./test-data/p1-preloaded_lists/employers.sql**
+* Deleted file.
