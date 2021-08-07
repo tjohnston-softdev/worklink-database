@@ -1,4 +1,4 @@
 # Changelog
 
-**./test-data/p1-preloaded_lists/readme.md**
-* Removed 'employers.sql' reference.
+**./test-data/p1-preloaded_lists/referrals.sql**
+* Added test data for 'ReferralSourceCompany' table.
