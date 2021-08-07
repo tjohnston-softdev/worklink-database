@@ -30,7 +30,7 @@ Workforce Link is a start-up company that helps recruit prospective support work
 
 ---
 
-## Further Development
+## Public Release
 
 As of June 2021, I have decided to start cleaning up backup files of the IT system I designed for Workforce Link. On the 5th of August, I publicly released the database design, a 'Support Worker' test data generation script, and a prototype build of the final product.
 
