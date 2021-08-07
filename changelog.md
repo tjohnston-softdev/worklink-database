@@ -1,4 +1,6 @@
 # Changelog
 
-**./test-data/p1-preloaded_lists/referrals.sql**
-* Defined 'registerTimestamp' for generic Referral Source entries. (2017-11-02 00:00:00)
+**./info/references.md**
+* Removed 'Employer test data' row.
+* Added 'Referral Source companies test data' row.
+* Last Updated: 7 August 2021
