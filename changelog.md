@@ -1,3 +1,3 @@
 # Changelog
 
-Updated 'Further Development'
+Opened 'revision' branch.
