@@ -34,6 +34,8 @@ Workforce Link is a start-up company that helps recruit prospective support work
 
 As of June 2021, I have decided to start cleaning up backup files of the IT system I designed for Workforce Link. On the 5th of August, I publicly released the database design, a 'Support Worker' test data generation script, and a prototype build of the final product.
 
+On 7 August 2021, I made revisions to the original schema and released a separate version. However, I have already discontinued the WF Link project as a whole. See [here](https://github.com/tjohnston-softdev/worklink-api-orig#further-development) as to why.
+
 ---
 
 ## Disclaimer
