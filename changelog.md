@@ -1,5 +1,6 @@
 # Changelog
 
-**./schema/db-definition.sql - SupportWorker**
-* Increased 'spokenAccent' column size. (50 to 100)
-	* Takes unicode characters into account.
+**./schema/db-definition.sql**
+* Changed 'locationID' type from `BIGINT` to `SMALLINT`
+	* Location (Primary)
+	* SupportWorker (Foreign)

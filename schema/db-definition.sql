@@ -18,7 +18,7 @@ CREATE TABLE StateTerritory
 
 CREATE TABLE Location
 (
-	locationID					BIGINT					NOT NULL			PRIMARY KEY,
+	locationID					SMALLINT				NOT NULL			PRIMARY KEY,
 	locationName				VARCHAR(50)				NOT NULL,
 	stateID						TINYINT UNSIGNED		NOT NULL,
 	postcodeNumber				SMALLINT UNSIGNED		NOT NULL,
@@ -166,7 +166,7 @@ CREATE TABLE SupportWorker
 	passwordString				VARCHAR(100)			NOT NULL,
 	dateOfBirth					DATE					NOT NULL,
 	feelsLikeAge				TINYINT UNSIGNED,
-	locationID					BIGINT					NOT NULL,
+	locationID					SMALLINT				NOT NULL,
 	aboutDesc					VARCHAR(2000)			NOT NULL,
 	skillDesc					VARCHAR(2000)			NOT NULL,
 	apperanceDesc				VARCHAR(2000),
