@@ -10,7 +10,6 @@ Columns marked as 'Unique' with a number, such as  'X(1)' form a composite alter
 ## Contents
 
 * [StateTerritory](#stateterritory)
-* [Postcode](#postcode)
 * [Location](#location)
 * [OtherLanguages](#otherlanguages)
 * [CulturalBackground](#culturalbackground)
@@ -43,12 +42,6 @@ Columns marked as 'Unique' with a number, such as  'X(1)' form a composite alter
 * [SupportWorkerExperienceAreas](#supportworkerexperienceareas)
 * [SupportWorkerPreviousExperience](#supportworkerpreviousexperience)
 * [SupportWorkerOther](#supportworkerother)
-* [Employer](#employer)
-* [Recommendation](#recommendation)
-* [SupportWorkerRecommendation](#supportworkerrecommendation)
-* [InterviewRequest](#interviewrequest)
-* [SupportWorkerRequest](#supportworkerrequest)
-
 ---
 
 ## StateTerritory
@@ -64,27 +57,16 @@ This table stores a hard-coded list of the states and territories within Austral
 
 ---
 
-## Postcode
-
-This table stores a list of postal codes within Australia that correspond to areas serviced by Workforce Link. It is used to match postcodes to suburbs, and write full location names. (eg. Milton, Queensland, 4064). See [Wikipedia](https://en.wikipedia.org/wiki/Postcodes_in_Australia) for more information on how postcodes work.
-
-| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
-|---|---|---|---|---|---|---|---|
-| postcodeNumber | Number referring to a postal code within Australia. | SMALLINT UNSIGNED | X | X | X |  |  |
-| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
-
----
-
 ## Location
 
 This table stores a list of suburbs and towns that are serviced by Workforce Link. When filling out their profile, a support worker can select a known suburb as their home location. The latitude and longitude indicates an 'origin point' which is used to help measure distances between suburbs when searching for support workers. (eg. Within 20 kilometres of Yamanto)
 
 | Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
 |---|---|---|---|---|---|---|---|
-| locationID | The ID number of the location entry. | BIGINT | X | X | X |  | AUTO_INCREMENT |
+| locationID | The ID number of the location entry. | SMALLINT | X | X | X |  | AUTO_INCREMENT |
 | locationName | The name of the location | VARCHAR(50) | X | X(1) |  |  |  |
 | stateID | The ID number of the Australian state or territory | TINYINT UNSIGNED | X |  |  | StateTerritory (stateID) |  |
-| postcodeNumber | The postal code of the location. | SMALLINT UNSIGNED | X | X(1) |  | Postcode (postcodeNumber) |  |
+| postcodeNumber | The postal code of the location. | SMALLINT UNSIGNED | X | X(1) |  |  |  |
 | latitude | The North-South geographic coordinate of the location's origin 			point. | DECIMAL(10,7) | X |  |  |  | 0 |
 | longitude | The East-West geographic coordinate of the location's origin 			point. | DECIMAL(10,7) | X |  |  |  | 0 |
 | activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
@@ -169,7 +151,6 @@ This table stores a hard-coded list of checks and clearances that a support work
 |---|---|---|---|---|---|---|---|
 | checkClearanceID | The ID number of the check/clearance option. | TINYINT UNSIGNED | X | X | X |  | AUTO_INCREMENT |
 | checkClearanceName | The name of the check/clearance option. | VARCHAR(100) | X | X |  |  |  |
-| checkClearanceDesc | The description of the check/clearance option. | VARCHAR(300) | X |  |  |  |  |
 | activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
 
 ---
@@ -309,10 +290,10 @@ The below 'SupportWorker_____' tables include further profile information such a
 | passwordString | The password used to log into the account. | VARCHAR(100) | X |  |  |  |  |
 | dateOfBirth | The support worker's Date of Birth. They must be over 18 in order to register an account. This represents their chronological age. | DATE | X |  |  |  |  |
 | feelsLikeAge | This is the age that the support worker 'feels like'. For example, they might be chronologically 25 but actually feel like 22. | TINYINT UNSIGNED |  |  |  |  |  |
-| locationID | The ID number of the suburb/town that the support worker resides in | BIGINT | X |  |  | Location (locationID) |  |
-| aboutDesc | Text that the support worker entered for their 'About Me' section on their profile, telling us a little about themselves. | VARCHAR(2000) | X |  |  |  |  |
-| skillDesc | Text that the support worker entered for the 'Skills' section of their profile, describing their attributes as a support worker. | VARCHAR(2000) | X |  |  |  |  |
-| apperanceDesc | Text that the support worker entered for the 'Appearance' section of their profile, describing what they look like, and any 			distinguishing features. | VARCHAR(2000) |  |  |  |  |  |
+| locationID | The ID number of the suburb/town that the support worker resides in | SMALLINT | X |  |  | Location (locationID) |  |
+| aboutDesc | Text that the support worker entered for their 'About Me' section on their profile, telling us a little about themselves. | TEXT | X |  |  |  |  |
+| skillDesc | Text that the support worker entered for the 'Skills' section of their profile, describing their attributes as a support worker. | TEXT | X |  |  |  |  |
+| apperanceDesc | Text that the support worker entered for the 'Appearance' section of their profile, describing what they look like, and any 			distinguishing features. | TEXT |  |  |  |  |  |
 | travelTimeMinutes | The amount of time in minutes they are willing to travel in order to perform duties. | SMALLINT UNSIGNED | X |  |  |  | 30 |
 | englishLanguageFlag | Flag as to whether the support worker is able to speak English. | TINYINT(1) | X |  |  |  |  |
 | signLanguageFlag | Flag as to whether the support worker is able to use sign language. | TINYINT(1) | X |  |  |  |  |
@@ -487,7 +468,7 @@ This table links support worker accounts to the areas of experience that they fe
 |---|---|---|---|---|---|---|---|
 | supportWorkerID | The ID number of the support worker that is experienced in a particular area. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
 | experienceAreaID | The ID number of the area that the support worker is experienced with | SMALLINT UNSIGNED | X |  | X | ExperienceArea (experienceAreaID) |  |
-| experienceDesc | Text that the support worker uses to describe how they are experienced in that area, including example scenarios. | VARCHAR(1000) |  |  |  |  |  |
+| experienceDesc | Text that the support worker uses to describe how they are experienced in that area, including example scenarios. | TEXT |  |  |  |  |  |
 | activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
 
 
@@ -503,7 +484,7 @@ This table stores information about the prospective support worker's employment 
 | positionNumber | The order number of that job position for a particular support worker. | TINYINT UNSIGNED | X |  | X |  | Increments per Support Worker |
 | positionTitle | The title that the support worker held as part of that job position. | VARCHAR(200) | X |  |  |  |  |
 | positionCompany | The company that the support worker held the job position with. | VARCHAR(200) | X |  |  |  |  |
-| positionDesc | A description of the job position including the duties and responsibilities. | VARCHAR(1000) | X |  |  |  |  |
+| positionDesc | A description of the job position including the duties and responsibilities. | TEXT | X |  |  |  |  |
 | startDate | The date that the support worker commenced the job position. | DATE | X |  |  |  |  |
 | endDate | The date that the support worker finished the job position. If this is empty, the position is current. | DATE |  |  |  |  |  |
 | activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
@@ -518,99 +499,22 @@ This table stores 'other' text that the support worker has written to display on
 | Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
 |---|---|---|---|---|---|---|---|
 | supportWorkerID | The ID number of the support worker profile. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
-| otherPersonality | Other description for personality traits. | VARCHAR(1000) |  |  |  |  |  |
-| otherHobbies | Other description for hobbies. | VARCHAR(1000) |  |  |  |  |  |
-| otherGaming | Other description for video games. | VARCHAR(1000) |  |  |  |  |  |
-| otherPets | Other description for pets. | VARCHAR(1000) |  |  |  |  |  |
-| otherAllergies | Other description for allergies. | VARCHAR(1000) |  |  |  |  |  |
-| otherFears | Other description for fears and phobias. | VARCHAR(1000) |  |  |  |  |  |
-| otherTechnology | Other description for technology usage. | VARCHAR(1000) |  |  |  |  |  |
-| otherQualifications | Other description for study qualifications. | VARCHAR(1000) |  |  |  |  |  |
-| otherExperienceAreas | Other description for experience areas. | VARCHAR(1000) |  |  |  |  |  |
-| otherAvailability | Other description related to availability. | VARCHAR(1000) |  |  |  |  |  |
-| otherGeneral | Additional text for anything that does not fit into the above 			sections. | VARCHAR(1000) |  |  |  |  |  |
+| otherPersonality | Other description for personality traits. | TEXT |  |  |  |  |  |
+| otherHobbies | Other description for hobbies. | TEXT |  |  |  |  |  |
+| otherGaming | Other description for video games. | TEXT |  |  |  |  |  |
+| otherPets | Other description for pets. | TEXT |  |  |  |  |  |
+| otherAllergies | Other description for allergies. | TEXT |  |  |  |  |  |
+| otherFears | Other description for fears and phobias. | TEXT |  |  |  |  |  |
+| otherTechnology | Other description for technology usage. | TEXT |  |  |  |  |  |
+| otherQualifications | Other description for study qualifications. | TEXT |  |  |  |  |  |
+| otherExperienceAreas | Other description for experience areas. | TEXT |  |  |  |  |  |
+| otherAvailability | Other description related to availability. | TEXT |  |  |  |  |  |
+| otherGeneral | Additional text for anything that does not fit into the above 			sections. | TEXT |  |  |  |  |  |
 | activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
-
-
----
-
-## Employer
-
-This table contains data about employers that are registered onto the Workforce Link system. When an employer is registered onto the system, they can search for support workers, view their profiles, and request interviews.
-
-| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
-|---|---|---|---|---|---|---|---|
-| employerID | The ID number of the employer account. | SMALLINT UNSIGNED | X | X | X |  | AUTO_INCREMENT |
-| employerAccessCode | The access code used to log into the employer account. | VARCHAR(100) | X | X |  |  |  |
-| registerTimestamp | The date and time that the employer account was registered on. | DATETIME | X |  |  |  | NOW() |
-| onlineContactFlag | Flag as to whether the employer can be contacted online. (eg. 			E-Mail) | TINYINT(1) | X |  |  |  | 1 |
-| businessName | The name of the business that employs support workers. | VARCHAR(200) | X |  |  |  |  |
-| businessAddress | The physical street address of the business. | VARCHAR(300) | X |  |  |  |  |
-| contactName | The full name of the person to contact within the business. | VARCHAR(100) | X |  |  |  |  |
-| contactPosition | The job title of the contact person. | VARCHAR(100) | X |  |  |  |  |
-| contactEmail | The E-Mail address of the contact person. | VARCHAR(150) | X | X |  |  |  |
-| contactPhone | The phone number of the contact person. | CHAR(10) | X | X |  |  |  |
-| websiteURL | The URL of the business website. | VARCHAR(300) | X |  |  |  |  |
-| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
-
-
----
-
-## Recommendation
-
-This table includes data about recommendations to employers made by Workforce Link to consider recruiting these support workers for job roles.
-
-| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
-|---|---|---|---|---|---|---|---|
-| recommendationID | The ID number of a recommendation. | INT | X | X | X |  | AUTO_INCREMENT |
-| employerID | The ID number of the employer that the support workers are being recommended to. | SMALLINT UNSIGNED | X |  |  | Employer (employerID) |  |
-| recommendationTimestamp | The date and time of the recommendation. | DATETIME | X |  |  |  | NOW() |
-| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
-
-
----
-
-## SupportWorkerRecommendation
-
-This table links support workers to recommendations made on their behalf. A support worker can be recommended multiple times, and multiple support workers can be recommended to an employer in the same batch.
-
-| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
-|---|---|---|---|---|---|---|---|
-| recommendationID | The ID number of the recommendation that the support worker is part of. | INT | X |  | X | Recommendation (recommendationID) |  |
-| supportWorkerID | The ID number of the support worker being recommended to the employer. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
-| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
-
-
----
-
-## InterviewRequest
-
-This table includes data about requests made by registered employers to interview chosen support workers for job roles.
-
-| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
-|---|---|---|---|---|---|---|---|
-| interviewRequestID | The ID number of the interview request. | INT | X | X | X |  | AUTO_INCREMENT |
-| employerID | The ID number of the employer that is requesting an interview with a support worker. | SMALLINT UNSIGNED | X |  |  | Employer (employerID) |  |
-| requestTimestamp | The date and time of the interview request. | DATETIME | X |  |  |  | NOW() |
-| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
-
-
----
-
-## SupportWorkerRequest
-
-This table links support workers to the interview requests that have been sent. A support worker can be requested multiple times (Even by the same employer). Multiple support workers can be requested by an employer in the same batch.
-
-| Name | Description | Data Type | Required | Unique | Primary Key | Foreign Key | Default |
-|---|---|---|---|---|---|---|---|
-| interviewRequestID | The ID number of the interview request being made between an employer and support worker. | INT | X |  | X | InterviewRequest (interviewRequestID) |  |
-| supportWorkerID | The ID number of the support worker being requested for an interview. | INT | X |  | X | SupportWorker (supportWorkerID) |  |
-| activeFlag | Flag as to whether this row is active. | TINYINT(1) | X |  |  |  | 1 |
-
 
 ---
 
 **Originally Written:** 21 - 23 July 2021  
-**Last Updated:** 29 July 2021
+**Last Updated:** 7 August 2021
 
 [Return to index](../readme.md)
