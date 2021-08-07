@@ -1,10 +1,11 @@
 # Changelog
 
-**./schema/db-definition.sql**
-* Removed tables:
-	* Employer
-	* Recommendation
-	* SupportWorkerRecommendation
-	* InterviewRequest
-	* SupportWorkerRequest
-* These were never used in the prototype, and will not be used here.
+**./schema/db-definition.sql - CheckClearance**
+* Removed 'checkClearanceDesc' column.
+
+---
+
+**./test-data/p1-preloaded_lists/certifications.sql**
+* Changes to `INSERT INTO CheckClearance` command:
+	* Removed 'checkClearanceDesc' column.
+	* Removed 'DESC' placeholder values.

@@ -1,16 +1,16 @@
 USE linkServicesGroup;
 
-INSERT INTO CheckClearance (checkClearanceName, checkClearanceDesc) VALUES
-('Willing to obtain', 'DESC'),
-('First Aid', 'DESC'),
-('Blue Card', 'DESC'),
-('Criminal History Check', 'DESC'),
-('Police Check', 'DESC'),
-('Insurance Check', 'DESC'),
-('Mental Health', 'DESC'),
-('Hand Hygene and Infection Control', 'DESC'),
-('Manual Handling', 'DESC'),
-('Worker Orientation Module', 'DESC');
+INSERT INTO CheckClearance (checkClearanceName) VALUES
+('Willing to obtain'),
+('First Aid'),
+('Blue Card'),
+('Criminal History Check'),
+('Police Check'),
+('Insurance Check'),
+('Mental Health'),
+('Hand Hygene and Infection Control'),
+('Manual Handling'),
+('Worker Orientation Module');
 
 
 INSERT INTO Qualification (qualificationName) VALUES

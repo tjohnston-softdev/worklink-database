@@ -75,7 +75,6 @@ CREATE TABLE CheckClearance
 (
 	checkClearanceID			TINYINT UNSIGNED		NOT NULL			PRIMARY KEY		AUTO_INCREMENT,
 	checkClearanceName			VARCHAR(100)			UNIQUE NOT NULL,
-	checkClearanceDesc			VARCHAR(300)			NOT NULL,
 	activeFlag					TINYINT(1)				NOT NULL			DEFAULT 1
 );
 
@@ -131,7 +130,6 @@ CREATE TABLE DomesticAnimal
 	domesticAnimalName			VARCHAR(50)				UNIQUE NOT NULL,
 	activeFlag					TINYINT(1)				NOT NULL			DEFAULT 1
 );
-
 
 
 CREATE TABLE ReferralSource
