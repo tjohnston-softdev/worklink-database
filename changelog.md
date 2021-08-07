@@ -1,6 +1,5 @@
 # Changelog
 
 **./schema/db-definition.sql - SupportWorker**
-* Increased encrypted `VARCHAR` sizes for columns:
-	* driversLicenseNumber (32 to 35)
-	* phoneContactNumber (32 to 35)
+* Increased 'spokenAccent' column size. (50 to 100)
+	* Takes unicode characters into account.

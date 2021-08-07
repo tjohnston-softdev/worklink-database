@@ -173,7 +173,7 @@ CREATE TABLE SupportWorker
 	travelTimeMinutes			SMALLINT UNSIGNED		NOT NULL			DEFAULT 30,
 	englishLanguageFlag			TINYINT(1)				NOT NULL,
 	signLanguageFlag			TINYINT(1)				NOT NULL,
-	spokenAccent				VARCHAR(50)				NOT NULL,
+	spokenAccent				VARCHAR(100)			NOT NULL,
 	culturalBackgroundID		TINYINT UNSIGNED		NOT NULL,
 	vegetarianFlag				TINYINT UNSIGNED		NOT NULL			DEFAULT 0,
 	petFriendlyFlag				TINYINT(1)				NOT NULL			DEFAULT 0,
