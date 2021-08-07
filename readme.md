@@ -14,7 +14,7 @@ The definition SQL scripts are dated circa 26 November 2019 at approx. 12:30PM (
 
 ## Installing
 
-1. First, run the [database definition scriptl](./schema/db-definition.sql). This defines the database itself along with the empty tables.
+1. First, run the [database definition script](./schema/db-definition.sql). This defines the database itself along with the empty tables.
 2. If you plan on using the [prototype server](https://github.com/tjohnston-softdev/worklink-api-orig), you will also need to run [active sessions definition script](./schema/active-sessions.sql). This is a separate database that stores user sessions.
 3. Add the [Preloaded Lists test data](./test-data/p1-preloaded_lists/readme.md). It does not matter which order you execute the SQL files in.
 4. Generate Support Worker test data using this [generation script](https://github.com/tjohnston-softdev/worklink-data-gen). You need to execute the SQL files in their numbered order. Otherwise, there may be errors.
