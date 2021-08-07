@@ -16,13 +16,6 @@ CREATE TABLE StateTerritory
 );
 
 
-CREATE TABLE Postcode
-(
-	postcodeNumber				SMALLINT UNSIGNED		NOT NULL			PRIMARY KEY,
-	activeFlag					TINYINT(1)				NOT NULL			DEFAULT 1
-);
-
-
 CREATE TABLE Location
 (
 	locationID					BIGINT					NOT NULL			PRIMARY KEY,
@@ -33,8 +26,7 @@ CREATE TABLE Location
 	longitude					DECIMAL(10,7)			NOT NULL			DEFAULT 0,
 	activeFlag					TINYINT(1)				NOT NULL			DEFAULT 1,
 	UNIQUE (postcodeNumber, locationName),
-	FOREIGN KEY (stateID) REFERENCES StateTerritory(stateID) ON UPDATE CASCADE ON DELETE NO ACTION,
-	FOREIGN KEY (postcodeNumber) REFERENCES Postcode(postcodeNumber) ON UPDATE CASCADE ON DELETE NO ACTION
+	FOREIGN KEY (stateID) REFERENCES StateTerritory(stateID) ON UPDATE CASCADE ON DELETE NO ACTION
 );
 
 
