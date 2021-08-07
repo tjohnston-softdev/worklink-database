@@ -1,4 +1,4 @@
 # Changelog
 
 **./info/data-dict.md**
-* Updated to match revised schema.
+* Corrected 'SupportWorker' VARCHAR column sizes to match revised schema.

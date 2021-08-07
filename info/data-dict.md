@@ -282,8 +282,8 @@ The below 'SupportWorker_____' tables include further profile information such a
 |---|---|---|---|---|---|---|---|
 | supportWorkerID | The ID number of the support worker user account. | INT | X | X | X |  | AUTO_INCREMENT |
 | emailAddress | The E-Mail address used to log into the support worker user account. | VARCHAR(300) | X | X |  |  |  |
-| driversLicenseNumber | The drivers license number of the support worker. | VARCHAR(32) | X | X |  |  |  |
-| phoneContactNumber | The phone number used to contact the support worker. | VARCHAR(32) | X | X |  |  |  |
+| driversLicenseNumber | The drivers license number of the support worker. | VARCHAR(35) | X | X |  |  |  |
+| phoneContactNumber | The phone number used to contact the support worker. | VARCHAR(35) | X | X |  |  |  |
 | firstName | The support worker's first name. | VARCHAR(50) | X |  |  |  |  |
 | genderFlag | Flag used to indicate the support worker's chosen gender. A positive number is Male, a negative number is Female, and a zero is Other/Non-Binary | TINYINT | X |  |  |  | 0 |
 | registerTimestamp | The date and time when the support worker registered their account. | DATETIME | X |  |  |  | NOW() |
@@ -297,7 +297,7 @@ The below 'SupportWorker_____' tables include further profile information such a
 | travelTimeMinutes | The amount of time in minutes they are willing to travel in order to perform duties. | SMALLINT UNSIGNED | X |  |  |  | 30 |
 | englishLanguageFlag | Flag as to whether the support worker is able to speak English. | TINYINT(1) | X |  |  |  |  |
 | signLanguageFlag | Flag as to whether the support worker is able to use sign language. | TINYINT(1) | X |  |  |  |  |
-| spokenAccent | Short text that describes the support worker's accent. (Origin and strength) | VARCHAR(50) | X |  |  |  |  |
+| spokenAccent | Short text that describes the support worker's accent. (Origin and strength) | VARCHAR(100) | X |  |  |  |  |
 | culturalBackgroundID | The ID number of the cultural background that the support worker identifies as. | TINYINT UNSIGNED | X |  |  | CulturalBackground (culturalBackgroundID) |  |
 | vegetarianFlag | Flag as to whether the support worker is vegetarian or vegan. (0=Neither, 1=Vegetarian, 2=Vegan) | TINYINT UNSIGNED | X |  |  |  | 0 |
 | petFriendlyFlag | Flag as to whether the support worker is pet-friendly. | TINYINT(1) | X |  |  |  |  |
