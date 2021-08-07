@@ -1,4 +1,3 @@
 # Changelog
 
-**./readme.md**
-* Renamed 'Further Development' section to 'Public Release'
+Generated Support Worker test data is compatible with revised schema.
