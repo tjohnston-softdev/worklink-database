@@ -1,11 +1,6 @@
 # Changelog
 
-**./schema/db-definition.sql**
-* Removed 'Postcode' table - Merged into 'Location'
-* Removed `Postcode(postcodeNumber)` Foreign Key from 'Location' table.
-
----
-
-**./test-data/p1-preloaded_lists/geography.sql**
-* Removed 'Postcode' test data.
-	* `INSERT INTO Postcode`
+**./schema/db-definition.sql - SupportWorker**
+* Increased encrypted `VARCHAR` sizes for columns:
+	* driversLicenseNumber (32 to 35)
+	* phoneContactNumber (32 to 35)
