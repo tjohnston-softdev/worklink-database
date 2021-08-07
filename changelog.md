@@ -1,4 +1,5 @@
 # Changelog
 
-**./readme.md**
-* Corrected 'database definition script' link typo. (Installing Step #1)
+**./test-data/p1-preloaded_lists/referrals.sql**
+* Added missing 'registerTimestamp' value to 'Search Engine'
+* Fixed invalid semicolons for `INSERT INTO ReferralSourceCompany` command.

@@ -2,7 +2,7 @@ USE linkServicesGroup;
 
 /* Generic sources */
 INSERT INTO ReferralSource (referralSourceName, websiteURL, registerTimestamp) VALUES
-('Search Engine', ''),
+('Search Engine', '', '2017-11-02 00:00:00'),
 ('SEEK', 'https://www.seek.com.au/', '2017-11-02 00:00:00'),
 ('Indeed', 'https://au.indeed.com/', '2017-11-02 00:00:00'),
 ('LinkedIn', 'https://au.linkedin.com/', '2017-11-02 00:00:00'),
@@ -32,9 +32,9 @@ INSERT INTO ReferralSource (referralSourceName, registerTimestamp, websiteURL) V
 
 /* Companies - Sub */
 INSERT INTO ReferralSourceCompany VALUES
-(19, '3 Golf View Crossing', 'Zerk Breewood', 'zbreewood0@archive.org', '0495136114', 1);
-(20, '66543 Judy Parkway', 'Giselbert Covet', 'gcovet1@blog.com', '0481860838', 1);
-(21, '80131 Union Point', 'Currie Pirrey', 'cpirrey2@w3.org', '0459441866', 1);
-(22, '8702 Larry Alley', 'Nev Klimschak', 'nklimschak3@sogou.com', '0483342830', 1);
+(19, '3 Golf View Crossing', 'Zerk Breewood', 'zbreewood0@archive.org', '0495136114', 1),
+(20, '66543 Judy Parkway', 'Giselbert Covet', 'gcovet1@blog.com', '0481860838', 1),
+(21, '80131 Union Point', 'Currie Pirrey', 'cpirrey2@w3.org', '0459441866', 1),
+(22, '8702 Larry Alley', 'Nev Klimschak', 'nklimschak3@sogou.com', '0483342830', 1),
 (23, '9987 Ohio Alley', 'Bobbie Guiot', 'bguiot4@reuters.com', '0461739301', 1);
 
